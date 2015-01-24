@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class=''>
+   <head>
+      <meta charset='UTF-8'>
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <style>@import url(http://fonts.googleapis.com/css?family=Lato);
+         html {
+         height: 100%;
+         overflow: hidden;
+         }
+         body {
+         margin:0;
+         padding:0;
+         perspective: 1px;
+         transform-style: preserve-3d;
+         height: 100%;
+         overflow-y: scroll;
+         overflow-x: hidden;
+         font-family: Lato;
+         }
+         h1 {
+         font-size: 250%
+         }
+         p {
+         font-size: 140%;
+         line-height: 150%;
+         color: #333;
+         }
+         .slide {
+         position: relative;
+         padding: 25vh 10%;
+         min-height: 100vh;
+         width: 100vw;
+         box-sizing: border-box;
+         box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+         transform-style: inherit;
+         }
+         .gallery {
+         position: absolute;
+         top: 50%;
+         left: 35%;
+         width: 320px;
+         height: 240px;
+         transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+         padding: 10px;
+         background: rgba(240,230,220, .7);
+         box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+         }
+         .gallery:last-of-type {
+         transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+         }
+         .slide:before {
+         content: "";
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left:0;
+         right:0;
+         }
+         .title {
+         width: 50%;
+         padding: 5%;
+         background: rgba(240,230,220, .7);
+         box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+         }
+         .slide:nth-child(2n) .title {
+         margin-left: 0;
+         margin-right: auto;
+         }
+         .slide:nth-child(2n+1) .title {
+         margin-left: auto;
+         margin-right: 0;
+         }
+         .slide, .slide:before {
+         background: 50% 50% / cover;
+         }
+         .header {
+         text-align: center;
+         font-size: 175%;
+         color: #fff;
+         text-shadow: 0 2px 2px #000;
+         }
+         .header p {
+         text-align: center;
+         font-size: 125%;
+         color: #fff;
+         text-shadow: 0 2px 2px #000; 
+         }
+         .block-title {
+         background-image: url("images/img2.jpg");
+         background-attachment: fixed;
+         }
+         .slide1:before {
+         background-image: url("images/img1.jpg");
+         transform: translateZ(-1px) scale(2);
+         z-index:-1;
+         }
+         .slide2 {
+         background-image: url("images/img3.jpg");
+         background-attachment: fixed;
+         }
+         .slide3:before {
+         background-image: url("images/img4.jpg");
+         transform: translateZ(-1px) scale(2);
+         z-index:-1;
+         }
+         .slide4 {
+         background-image: url("images/img5.jpg");
+         background-attachment: fixed;
+         }
+         .slide5:before {
+         background-image: url("images/img6.jpg");
+         transform: translateZ(-1px) scale(2);
+         z-index:-1;
+         }
+         .slide6 {
+         background-image: url("images/img7.jpg");
+         background-attachment: fixed;
+         }
+         .slide7:before {
+         background-image: url("images/img14.jpg");
+         transform: translateZ(-1px) scale(2);
+         z-index:-1;
+         }
+         .slide8 {
+         background-image: url("images/img3.jpg");
+         background-attachment: fixed;
+         transform: translateZ(-1px) scale(2);
+         }
+         .slideLast {
+         background-image: url("images/last.jpg");
+         background-attachment: fixed;
+         }
+	   .webcam {
+		width: 100%;
+		height: 400px;	
+	      box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+	   }
+	   .slideLast p {
+         text-align: center;
+         font-size: 50%;
+         position: absolute;
+         top: 90%;
+	   left: 0;
+	   right: 0;
+	   }
+      </style>
+   </head>
+   <body onload="initialize()">
+      <div class="slide header block-title">
+         <h1>Everest</h1>
+	   <p>
+            Mount Everest is the Earth's highest mountain<br/>
+            It is located in the Mahalangur section of the Himalayas
+	    </p>
+      </div>
+      <div class="slide slide1">
+         <div class="title">
+		<h1>Geography</h1>
+		<p>
+                           Everest is 29,035 feet or 8848 meters high.
+                           The summit is the border of Nepal to the south and China or Tibet on the north.
+                           It is over 60 million years old.
+                           Everest was formed by the movement of the Indian tectonic plate pushing up and against the Asian plate.
+                           Everest grows by about a quarter of an inch (0.25") every year.
+                           It consist of different types of shale, limestone and marble.
+                           The rocky summit is covered with deep snow all year long.
+		</p>
+
+
+         </div>
+      </div>
+      <div class="slide slide2">
+         <div class="title">
+            <h1>History</h1>
+            <p>
+                           Like all mountains around the world, the local, indiginious people were the first to see it.
+                           It was first identified for the western world by a British survey team lead by Sir George Everest in 1841.
+                           Everest was first named Peak 15 and measured at 29,002 feet in 1856.
+                           In 1865, it was named Mount Everest, after Sir George Everest.
+                           In 1955, the height was adjusted to 29,028 feet and is still used by Nepal.
+                           China uses 29,015 feet as the official height today.
+                           Using GPS technology, the summit was measured at 29,035 feet in 1999.
+            </p>
+         </div>
+         <img class="gallery" src="images/img9.jpg">
+         <img class="gallery" src="images/img10.jpg">
+      </div>
+      <div class="slide slide3">
+         <div class="title">
+            <h1>Weather</h1>
+            <p>
+              The Jet Stream sits on top of Everest almost all year long.
+                            The wind can blow over 200 mph.The temperature can be -80F.
+                            In mid May each year, the jet stream moves north causing the winds the calm and temperatures to warm enough for people to try to summit.
+                            This is called the 'summit window'. There is a similar period each fall in November. 
+                            It can be very hot with temperatures over 100F in the Western Cwm, an area climbers go through to reach the summit.
+            </p>
+         </div>
+      </div>
+
+      <div class="slide slide4">
+         <div class="title">
+            <h1>Climbing</h1>
+            <p>
+                            There are 18 different climbing routes on Everest.
+                            It takes 40 days to climb Mt. Everest in order for the body to adjust to the high altitude. 
+                            There is 66% less oxygen in each breath on the summit of Everest than at sea level.
+                            Thin nylon ropes are used to keep climbers from falling.
+                            Climbers wear spikes on their boots called crampons.
+                            They also use ice axes to help stop a fall.
+                            Thick, puffy suits filled with goose feathers keep climbers warm.
+                            Most climbers eat a lot of rice and noodles for food.
+                            Almost all climbers use bottled oxygen because it is so high. It helps keep the climbers warm.
+                            Climbers start using bottled oxygen at 26,000 feet but it only makes a 3,000 foot difference in how they feel so at 27,000 feet, they feel like they are at 24,000 feet.
+                            You have to be 16 or older to climb from the Nepal side and 18 on the Chinese side.
+            </p>
+         </div>
+         <img class="gallery" src="images/img12.jpg">
+         <img class="gallery" src="images/img11.jpg">
+      </div>
+      <div class="slide slide5">
+         <div class="title">
+            <h1>Live Webcam</h1>
+            <p>
+		   <img class="webcam" src="http://www.evk2cnr.org/WebCams/PyramidOne/current_online.jpg"><br>
+		   With the installation of a webcam atop Kala Patthar on May 17, people around the world can view high resolution images of Mount Everest (Sagarmatha), thanks to EvK2Cnr, which installed the Mobotix webcam in collaboration with Nepal Academy of Science and Technology (NAST) and the Department of Hydrology and Meteorology.
+		       A statement issued by EvK2Cnr, the installation was part of the 2011 Share Everest expedition.
+            </p>
+         </div>
+      </div>
+      <div class="slide slide6">
+         <div class="title">
+            <h1>Live Webcam Grab</h1>
+            <p><iframe width="100%" height="400" src="https://www.youtube.com/embed/cUrOx8zuk_8" frameborder="0" allowfullscreen></iframe><br>
+		      The webcam, installed by EvK2Cnr's Italian and Nepali technicians will be active only during daylight, almost between 6 am and 18 pm.
+                                     The statement said the Mobotix is the "highest webcam" in the world.
+		</p>
+         </div>
+      </div>
+      <div class="slide slide7">
+         <div class="title mapBlock">
+            <h1>Everest on map</h1>
+		<p>Explore Everest location using map below<br>
+		   <iframe src='map.html' width="100%" height="400" frameborder="no" scrolling="no" seamless></iframe>
+		</p>
+         </div>
+      </div>
+      <div class="slide header slideLast">
+         <h1>The End</h1>
+	   <p>
+		This site was created in educational use only.<br>
+		All images on our site goes under CC0 1.0 Universal Licence.
+	   </p>
+      </div>
+   </body>
+</html>
+
